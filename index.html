@@ -3,76 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multimedia-Rich Webpage</title>
+    <title>Complete HTML5 Project</title>
 </head>
 <body>
+    <!-- Main Header -->
+    <header>
+        <h1>Welcome to My Complete HTML5 Project</h1>
+    </header>
 
-    <!-- Header -->
-    <h1>Welcome to My Multimedia-Rich Webpage</h1>
+    <!-- Ordered List Section -->
+    <section>
+        <h2>Development Process (Ordered List with Roman Numerals)</h2>
+        <ol type="I">
+            <li>Requirement Analysis</li>
+            <li>System Design</li>
+            <li>Implementation</li>
+            <li>Testing Phase</li>
+            <li>Deployment</li>
+        </ol>
+    </section>
 
-    <!-- Audio Element -->
-    <h2>Audio Example</h2>
-    <audio controls>
-        <source src="audio.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+    <!-- External Image from Pexels -->
+    <section>
+        <h2>Nature Photography</h2>
+        <img src="https://images.pexels.com/photos/15286/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+             alt="Mountain landscape"
+             width="600"
+             height="400">
+    </section>
 
-    <!-- Video Element -->
-    <h2>Video Example</h2>
-    <video width="400" controls>
-        <source src="video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+    <!-- Contacts Table -->
+    <section>
+        <h2>Contact Directory</h2>
+        <table border="1">
+            <caption>Company Contacts</caption>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Mobile</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John Smith</td>
+                    <td>123 Oak St, Boston</td>
+                    <td>(555) 123-4567</td>
+                    <td>john.smith@email.com</td>
+                </tr>
+                <!-- Add 4 more contacts -->
+                <tr>
+                    <td>Sarah Johnson</td>
+                    <td>456 Pine Rd, NYC</td>
+                    <td>(555) 234-5678</td>
+                    <td>sarahj@work.com</td>
+                </tr>
+                <tr>
+                    <td>Mike Chen</td>
+                    <td>789 Maple Ave, SF</td>
+                    <td>(555) 345-6789</td>
+                    <td>mike.chen@tech.org</td>
+                </tr>
+                <tr>
+                    <td>Emma Wilson</td>
+                    <td>321 Birch Ln, Austin</td>
+                    <td>(555) 456-7890</td>
+                    <td>emma.w@design.io</td>
+                </tr>
+                <tr>
+                    <td>David Kim</td>
+                    <td>654 Cedar St, Seattle</td>
+                    <td>(555) 567-8901</td>
+                    <td>david.kim@dev.net</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
 
-    <!-- Registration Form with Validation -->
-    <h2>Registration Form</h2>
-    <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br><br>
+    <!-- Enhanced Registration Form -->
+    <section>
+        <h2>User Registration</h2>
+        <form id="registrationForm" method="post">
+            <fieldset>
+                <legend>Personal Details</legend>
+                
+                <div>
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName"
+                           placeholder="Enter your full name"
+                           required minlength="3" maxlength="50">
+                </div>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
+                <div>
+                    <label for="userEmail">Email:</label>
+                    <input type="email" id="userEmail" name="userEmail"
+                           placeholder="example@domain.com"
+                           required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                </div>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required minlength="6"><br><br>
+                <div>
+                    <label for="userPassword">Password:</label>
+                    <input type="password" id="userPassword" name="userPassword"
+                           required minlength="8"
+                           placeholder="At least 8 characters">
+                </div>
 
-        <label for="dob">Date of Birth:</label>
-        <input type="date" id="dob" name="dob" required><br><br>
+                <div>
+                    <label for="birthDate">Date of Birth:</label>
+                    <input type="date" id="birthDate" name="birthDate" required>
+                </div>
+            </fieldset>
 
-        <input type="submit" value="Register">
-    </form>
+            <fieldset>
+                <legend>Additional Information</legend>
+                
+                <div>
+                    <label for="country">Country:</label>
+                    <select id="country" name="country" required>
+                        <option value="">Select Country</option>
+                        <option value="us">United States</option>
+                        <option value="ca">Canada</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="au">Australia</option>
+                    </select>
+                </div>
 
-    <!-- Embedded Image -->
-    <h2>Embedded Image</h2>
-    <img src="image.jpg" alt="A beautiful scenery" width="400">
+                <div>
+                    <label>Subscription Type:</label>
+                    <input type="radio" id="freeTier" name="subscription" value="free" required>
+                    <label for="freeTier">Free</label>
+                    
+                    <input type="radio" id="premiumTier" name="subscription" value="premium">
+                    <label for="premiumTier">Premium</label>
+                </div>
 
-    <!-- Table -->
-    <h2>Sample Table</h2>
-    <table border="1">
-        <tr>
-            <th>Name</th>
-            <th>Age</th>
-            <th>Country</th>
-        </tr>
-        <tr>
-            <td>Alice</td>
-            <td>25</td>
-            <td>USA</td>
-        </tr>
-        <tr>
-            <td>Bob</td>
-            <td>30</td>
-            <td>Canada</td>
-        </tr>
-    </table>
+                <div>
+                    <label>Notifications:</label>
+                    <input type="checkbox" id="emailAlerts" name="notifications" value="email">
+                    <label for="emailAlerts">Email Alerts</label>
+                    
+                    <input type="checkbox" id="smsAlerts" name="notifications" value="sms">
+                    <label for="smsAlerts">SMS Alerts</label>
+                </div>
+            </fieldset>
 
-    <!-- List -->
-    <h2>My Favorite Fruits</h2>
-    <ul>
-        <li>Apple</li>
-        <li>Banana</li>
-        <li>Cherry</li>
-    </ul>
+            <button type="submit">Complete Registration</button>
+        </form>
+    </section>
 
+    <!-- Multimedia Section -->
+    <section>
+        <h2>Multimedia Content</h2>
+        
+        <article>
+            <h3>Nature Sounds</h3>
+            <audio controls>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                Your browser does not support audio element
+            </audio>
+        </article>
+
+        <article>
+            <h3>Sample Video</h3>
+            <video width="600" controls>
+                <source src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4">
+                Your browser does not support video tag
+            </video>
+        </article>
+    </section>
 </body>
 </html>
